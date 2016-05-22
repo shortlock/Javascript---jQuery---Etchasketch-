@@ -6,7 +6,6 @@ $(document).ready(function() {
 		var i = input * input;
 		var height1 = $('.container').width();
 		var sizeOfGrids = height1/input-2;
-		
 		/*while(i > 0 && input < 129) {
 			$('.container').append('<div class="grid"></div>');
 			i--;
@@ -20,8 +19,11 @@ $(document).ready(function() {
 						'width': sizeOfGrids
 						});
 	});
-	
-	$('div').on('mouseenter', '.grid',function() {
-		$(this).addClass('colored');
+	$('.container').on('mouseenter','.grid',function() {
+		var rgb1 =  Math.floor((Math.random() * 255) + 1) ;
+		var rgb2 =  Math.floor((Math.random() * 255) + 1) ;
+		var rgb3 =  Math.floor((Math.random() * 255) + 1) ;
+		$(this).css({'background-color': 'rgb('+rgb1+','+rgb2+','+rgb3+')'
+			});
 	});
 });
